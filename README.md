@@ -1,1 +1,1 @@
-# baikonour
+# baikonur
