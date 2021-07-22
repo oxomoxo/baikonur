@@ -314,4 +314,10 @@ Percentage of the requests served within a certain time (ms)
   98%     21
   99%     22
  100%     34 (longest request)
+
+Now try emptying the router from any route and test with a "{hello: 'world'}" json object, conversely try fastify with 100 routes in the tree ...
+At this point, you may expect some numbers to prove it, so I run two equivalent servers that output the same piece of JSON through load test using Vegeta. As mentioned before, Fastify outperforms Express in every single factor.
+
+vegeta attack -duration=10s -rate=0 -max-workers=1 | vegeta report
+
 */
